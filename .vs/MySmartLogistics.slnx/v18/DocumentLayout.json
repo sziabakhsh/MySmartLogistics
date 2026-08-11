@@ -1,12 +1,105 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\GitProjects\\__Github\\MySmartLogistics\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB042F36-03E5-4726-ADE4-C2C2BC8359B8}|MyLogistics.WebAPI\\MyLogistics.WebAPI.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.webapi\\controllers\\databasetestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB042F36-03E5-4726-ADE4-C2C2BC8359B8}|MyLogistics.WebAPI\\MyLogistics.WebAPI.csproj|solutionrelative:mylogistics.webapi\\controllers\\databasetestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB042F36-03E5-4726-ADE4-C2C2BC8359B8}|MyLogistics.WebAPI\\MyLogistics.WebAPI.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB042F36-03E5-4726-ADE4-C2C2BC8359B8}|MyLogistics.WebAPI\\MyLogistics.WebAPI.csproj|solutionrelative:mylogistics.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|solutionrelative:mylogistics.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|solutionrelative:mylogistics.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.infrastructure\\health\\cosmosdbhealthcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|solutionrelative:mylogistics.infrastructure\\health\\cosmosdbhealthcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseTestController.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.WebAPI\\Controllers\\DatabaseTestController.cs",
+              "RelativeDocumentMoniker": "MyLogistics.WebAPI\\Controllers\\DatabaseTestController.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.WebAPI\\Controllers\\DatabaseTestController.cs*",
+              "RelativeToolTip": "MyLogistics.WebAPI\\Controllers\\DatabaseTestController.cs*",
+              "ViewState": "AgIAABcAAAAAAAAAAAAcwCcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T04:28:36.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "MyLogistics.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T04:16:08.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Infrastructure\\AppDbContext.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "MyLogistics.Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T04:15:10.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "MyLogistics.WebAPI\\Program.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.WebAPI\\Program.cs",
+              "RelativeToolTip": "MyLogistics.WebAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T21:02:23.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CosmosDbHealthCheck.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Health\\CosmosDbHealthCheck.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Infrastructure\\Health\\CosmosDbHealthCheck.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Health\\CosmosDbHealthCheck.cs",
+              "RelativeToolTip": "MyLogistics.Infrastructure\\Health\\CosmosDbHealthCheck.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAIAzwCkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T20:53:54.1Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

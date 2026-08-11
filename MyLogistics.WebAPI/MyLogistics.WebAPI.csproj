@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>c55a5af9-d03a-45cd-a61b-1c1c2651e76e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyLogistics.Application\MyLogistics.Application.csproj" />
+    <ProjectReference Include="..\MyLogistics.Infrastructure\MyLogistics.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

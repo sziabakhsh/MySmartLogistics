@@ -1,6 +1,16 @@
 <Solution>
-  <Folder Name="/Core/" />
-  <Folder Name="/Infrastructure/" />
-  <Folder Name="/Presentation/" />
-  <Folder Name="/Tests/" />
+  <Folder Name="/Core/">
+    <Project Path="MyLogistics.Application/MyLogistics.Application.csproj" Id="237acf2f-3d47-4f63-a9f7-352512ac2c9b" />
+    <Project Path="MyLogistics.Domain/MyLogistics.Domain.csproj" Id="f0b2a65f-ed49-4614-abbb-c1574fc5b1d0" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="MyLogistics.Infrastructure/MyLogistics.Infrastructure.csproj" Id="7f975710-dda2-4a96-90a5-c2c5f2492826" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="MyLogistics.WebAPI/MyLogistics.WebAPI.csproj" Id="ab042f36-03e5-4726-ade4-c2c2bc8359b8" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="MyLogistics.Application.Tests/MyLogistics.Application.Tests.csproj" Id="9f6333e9-be38-484e-b0fa-fc3b2882acbb" />
+    <Project Path="MyLogistics.Domain.Tests/MyLogistics.Domain.Tests.csproj" Id="25e9c75a-5fd8-4582-adbc-bc77b7b1a1d1" />
+  </Folder>
 </Solution>
