@@ -1,13 +1,21 @@
+using MyLogistics.Application;
+using MyLogistics.Application.Interfaces;
 using MyLogistics.Infrastructure;
 using MyLogistics.Infrastructure.Health;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-// Add services to the container.
-builder.Services.AddInfrastructure(builder.Configuration);
+// 1. Register Infrastructure (Provides IAppDbContext implementation)
+builder.Services.AddInfrastructureServices(builder.Configuration);
 
-// 1. Register Health Check
+//builder.Services.AddScoped<IAppDbContext>(provider =>
+//    provider.GetRequiredService<AppDbContext>());
+
+// 2. Register Application (Provides IOrderService implementation)
+builder.Services.AddAppServices();
+
+// 3. Register Health Check
 builder.Services.AddHealthChecks()
     .AddCheck<CosmosDbHealthCheck>(
         name: "cosmosdb",
@@ -33,7 +41,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-// 2. Map Health Check Endpoint (Built-in extension method)
+// 4. Map Health Check Endpoint (Built-in extension method)
 app.MapHealthChecks("/health");
 
 app.MapControllers();

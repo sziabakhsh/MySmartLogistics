@@ -1,12 +1,13 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MyLogistics.Application.Interfaces;
 
 namespace MyLogistics.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             // Read Cosmos DB configuration from User Secrets or AppSettings
             var cosmosEndpoint = configuration["CosmosDb:Endpoint"];
@@ -16,15 +17,12 @@ namespace MyLogistics.Infrastructure
             // Register EF Core DbContext with Azure Cosmos DB Provider
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseCosmos(
-                    accountEndpoint: cosmosEndpoint!,
-                    accountKey: cosmosKey!,
-                    databaseName: databaseName,
-                    cosmosOptions =>
-                    {
-                        cosmosOptions.RequestTimeout(TimeSpan.FromSeconds(15));
-                    });
+                options.UseCosmos(cosmosEndpoint!, cosmosKey!, databaseName);
             });
+
+            // Register EF Core DbContext with Azure Cosmos DB Provider
+            services.AddScoped<IAppDbContext>(sp => sp.GetRequiredService<AppDbContext>());
+
             return services;
         }
     }

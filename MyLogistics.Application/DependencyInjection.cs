@@ -1,0 +1,17 @@
+﻿
+using Microsoft.Extensions.DependencyInjection;
+using MyLogistics.Application.Services;
+using MyLogistics.Application.Interfaces;
+
+namespace MyLogistics.Application
+{
+    public static class DependencyInjection
+    {
+        public static IServiceCollection AddAppServices(this IServiceCollection services)
+        {
+            services.AddScoped<IOrderService,OrderService>();
+
+            return services;
+        }
+    }
+}
