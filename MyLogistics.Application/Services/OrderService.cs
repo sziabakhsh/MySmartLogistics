@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyLogistics.Application.DTOs.Order;
 using MyLogistics.Application.Interfaces;
 using MyLogistics.Domain.Ordering.Entities;
 using MyLogistics.Domain.Ordering.Enums;
 using MyLogistics.Domain.Ordering.ValueObjects;
 using MyLogistics.Application.Mappers;
+using MyLogistics.Application.DTOs;
 
 namespace MyLogistics.Application.Services
 {

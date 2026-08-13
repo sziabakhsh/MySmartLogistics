@@ -1,5 +1,5 @@
 ﻿
-using MyLogistics.Application.DTOs.Order;
+using MyLogistics.Application.DTOs;
 
 namespace MyLogistics.Application.Interfaces
 {

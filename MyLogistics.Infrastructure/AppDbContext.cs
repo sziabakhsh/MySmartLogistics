@@ -14,7 +14,9 @@ namespace MyLogistics.Infrastructure
 
         // Main DbSet for Order Aggregate Root
         public DbSet<Order> Orders => Set<Order>();
-        //public DbSet<Shipment> Shipments => Set<Shipment>();
+        public DbSet<Shipment> Shipments => Set<Shipment>();
+        public DbSet<Warehouse> Warehouses => Set<Warehouse>();
+        public DbSet<InventoryItem> InventoryItems => Set<InventoryItem>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

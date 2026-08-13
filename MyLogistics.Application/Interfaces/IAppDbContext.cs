@@ -8,8 +8,9 @@ namespace MyLogistics.Application.Interfaces
     {
         // DbSet for Entities Aggregate Root
         DbSet<Order> Orders { get; }
-        //DbSet<Shipment> Shipments { get; }
-
+        DbSet<Shipment> Shipments { get; }
+        DbSet<Warehouse> Warehouses { get; }
+        DbSet<InventoryItem> InventoryItems { get; }
         // Save changes to the underlying database
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }

@@ -10,6 +10,9 @@ namespace MyLogistics.Application
         public static IServiceCollection AddAppServices(this IServiceCollection services)
         {
             services.AddScoped<IOrderService,OrderService>();
+            services.AddScoped<IShipmentService, ShipmentService>();
+            services.AddScoped<IWarehouseService,WarehouseService>();
+            services.AddScoped<IInventoryService, InventoryService>();
 
             return services;
         }

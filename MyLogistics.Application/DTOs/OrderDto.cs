@@ -1,11 +1,6 @@
 ﻿using MyLogistics.Domain.Ordering.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MyLogistics.Application.DTOs.Order
+namespace MyLogistics.Application.DTOs
 {
     // DTO for returning Order entity
     public record OrderDto (

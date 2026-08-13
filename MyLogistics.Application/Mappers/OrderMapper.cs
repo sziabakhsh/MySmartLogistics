@@ -1,4 +1,4 @@
-﻿using MyLogistics.Application.DTOs.Order;
+﻿using MyLogistics.Application.DTOs;
 using MyLogistics.Domain.Ordering.Entities;
 using MyLogistics.Domain.Tenancy.Entities;
 using System;
