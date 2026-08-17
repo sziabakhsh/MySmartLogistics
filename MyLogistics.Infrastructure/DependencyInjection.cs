@@ -17,7 +17,11 @@ namespace MyLogistics.Infrastructure
             // Register EF Core DbContext with Azure Cosmos DB Provider
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseCosmos(cosmosEndpoint!, cosmosKey!, databaseName);
+                options.UseCosmos(
+                    accountEndpoint: cosmosEndpoint!,
+                    accountKey: cosmosKey!,
+                    databaseName: databaseName
+                );
             });
 
             // Register EF Core DbContext with Azure Cosmos DB Provider

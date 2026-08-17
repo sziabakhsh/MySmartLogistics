@@ -22,6 +22,9 @@ namespace MyLogistics.Infrastructure
         {
             base.OnModelCreating(modelBuilder);
 
+            // seting the throughput for the entire database to 400 RU/s (shared across all containers)
+            modelBuilder.HasManualThroughput(400);
+
             // Automatically apply configurations (like ToContainer, HasPartitionKey, OwnsOne) from Infrastructure
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }

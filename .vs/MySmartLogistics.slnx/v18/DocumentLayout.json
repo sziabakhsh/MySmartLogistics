@@ -1,12 +1,190 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\GitProjects\\__Github\\MySmartLogistics\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{237ACF2F-3D47-4F63-A9F7-352512AC2C9B}|MyLogistics.Application\\MyLogistics.Application.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.application\\services\\tenantprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237ACF2F-3D47-4F63-A9F7-352512AC2C9B}|MyLogistics.Application\\MyLogistics.Application.csproj|solutionrelative:mylogistics.application\\services\\tenantprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237ACF2F-3D47-4F63-A9F7-352512AC2C9B}|MyLogistics.Application\\MyLogistics.Application.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.application\\interfaces\\itenantprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237ACF2F-3D47-4F63-A9F7-352512AC2C9B}|MyLogistics.Application\\MyLogistics.Application.csproj|solutionrelative:mylogistics.application\\interfaces\\itenantprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB042F36-03E5-4726-ADE4-C2C2BC8359B8}|MyLogistics.WebAPI\\MyLogistics.WebAPI.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AB042F36-03E5-4726-ADE4-C2C2BC8359B8}|MyLogistics.WebAPI\\MyLogistics.WebAPI.csproj|solutionrelative:mylogistics.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB042F36-03E5-4726-ADE4-C2C2BC8359B8}|MyLogistics.WebAPI\\MyLogistics.WebAPI.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB042F36-03E5-4726-ADE4-C2C2BC8359B8}|MyLogistics.WebAPI\\MyLogistics.WebAPI.csproj|solutionrelative:mylogistics.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.infrastructure\\persistence\\configurations\\warehouseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|solutionrelative:mylogistics.infrastructure\\persistence\\configurations\\warehouseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.infrastructure\\persistence\\configurations\\shipmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|solutionrelative:mylogistics.infrastructure\\persistence\\configurations\\shipmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.infrastructure\\persistence\\configurations\\orderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|solutionrelative:mylogistics.infrastructure\\persistence\\configurations\\orderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.infrastructure\\persistence\\configurations\\inventoryitemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|solutionrelative:mylogistics.infrastructure\\persistence\\configurations\\inventoryitemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|solutionrelative:mylogistics.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|e:\\gitprojects\\__github\\mysmartlogistics\\mylogistics.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F975710-DDA2-4A96-90A5-C2C5F2492826}|MyLogistics.Infrastructure\\MyLogistics.Infrastructure.csproj|solutionrelative:mylogistics.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TenantProvider.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Application\\Services\\TenantProvider.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Application\\Services\\TenantProvider.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Application\\Services\\TenantProvider.cs",
+              "RelativeToolTip": "MyLogistics.Application\\Services\\TenantProvider.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T18:06:56.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ITenantProvider.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Application\\Interfaces\\ITenantProvider.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Application\\Interfaces\\ITenantProvider.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Application\\Interfaces\\ITenantProvider.cs",
+              "RelativeToolTip": "MyLogistics.Application\\Interfaces\\ITenantProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T18:04:57.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShipmentConfiguration.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Persistence\\Configurations\\ShipmentConfiguration.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Infrastructure\\Persistence\\Configurations\\ShipmentConfiguration.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Persistence\\Configurations\\ShipmentConfiguration.cs",
+              "RelativeToolTip": "MyLogistics.Infrastructure\\Persistence\\Configurations\\ShipmentConfiguration.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T14:45:09.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderConfiguration.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Persistence\\Configurations\\OrderConfiguration.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Infrastructure\\Persistence\\Configurations\\OrderConfiguration.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Persistence\\Configurations\\OrderConfiguration.cs",
+              "RelativeToolTip": "MyLogistics.Infrastructure\\Persistence\\Configurations\\OrderConfiguration.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T14:44:47.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InventoryItemConfiguration.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Persistence\\Configurations\\InventoryItemConfiguration.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Infrastructure\\Persistence\\Configurations\\InventoryItemConfiguration.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Persistence\\Configurations\\InventoryItemConfiguration.cs",
+              "RelativeToolTip": "MyLogistics.Infrastructure\\Persistence\\Configurations\\InventoryItemConfiguration.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T05:39:30.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "MyLogistics.WebAPI\\appsettings.json",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.WebAPI\\appsettings.json",
+              "RelativeToolTip": "MyLogistics.WebAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-16T05:13:44.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "MyLogistics.WebAPI\\Program.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.WebAPI\\Program.cs",
+              "RelativeToolTip": "MyLogistics.WebAPI\\Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAACoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T05:09:19.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WarehouseConfiguration.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Persistence\\Configurations\\WarehouseConfiguration.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Infrastructure\\Persistence\\Configurations\\WarehouseConfiguration.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\Persistence\\Configurations\\WarehouseConfiguration.cs",
+              "RelativeToolTip": "MyLogistics.Infrastructure\\Persistence\\Configurations\\WarehouseConfiguration.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T14:45:17.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "MyLogistics.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T05:06:05.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "MyLogistics.Infrastructure\\AppDbContext.cs",
+              "ToolTip": "E:\\GitProjects\\__Github\\MySmartLogistics\\MyLogistics.Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "MyLogistics.Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA2wBwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T22:06:28.183Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
