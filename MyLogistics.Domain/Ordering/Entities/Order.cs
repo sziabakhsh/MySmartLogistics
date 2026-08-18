@@ -8,7 +8,7 @@ namespace MyLogistics.Domain.Ordering.Entities
         public Guid Id { get; set; }
         public string TenantId { get; set; } = default!; // Cosmos DB Partition Key
         public string OrderNumber { get; set; } = default!;
-        public Guid CustomerId { get; set; }
+        public string CustomerName { get; set; }=string.Empty;
 
         public OrderStatus Status { get; set; }
         public PriorityLevel Priority { get; set; }

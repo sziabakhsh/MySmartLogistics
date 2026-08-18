@@ -13,7 +13,6 @@
     );
 
     public record CreateInventoryItemDto(
-        string TenantId,
         Guid WarehouseId,
         string Sku,
         string ProductName,

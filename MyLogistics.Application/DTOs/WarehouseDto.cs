@@ -13,7 +13,6 @@ namespace MyLogistics.Application.DTOs
     );
 
     public record CreateWarehouseDto(
-        string TenantId,
         string Name,
         string Code,
         string LocationName,

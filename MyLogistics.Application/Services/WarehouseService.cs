@@ -14,12 +14,12 @@ namespace MyLogistics.Application.Services
             _context = context;
         }
 
-        public async Task<WarehouseDto> CreateWarehouseAsync(CreateWarehouseDto dto, CancellationToken ct = default)
+        public async Task<WarehouseDto> CreateWarehouseAsync(CreateWarehouseDto dto, string tenantId, CancellationToken ct = default)
         {
             var warehouse = new Warehouse
             {
                 Id = Guid.NewGuid(),
-                TenantId = dto.TenantId,
+                TenantId = tenantId,
                 Name = dto.Name,
                 Code = dto.Code,
                 LocationName = dto.LocationName,

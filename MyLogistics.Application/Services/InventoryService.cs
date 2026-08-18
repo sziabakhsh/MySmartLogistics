@@ -15,12 +15,12 @@ namespace MyLogistics.Application.Services
             _context = context;
         }
 
-        public async Task<InventoryItemDto> CreateInventoryItemAsync(CreateInventoryItemDto dto, CancellationToken ct = default)
+        public async Task<InventoryItemDto> CreateInventoryItemAsync(CreateInventoryItemDto dto, string tenantId, CancellationToken ct = default)
         {
             var item = new InventoryItem
             {
                 Id = Guid.NewGuid(),
-                TenantId = dto.TenantId,
+                TenantId = tenantId,
                 WarehouseId = dto.WarehouseId,
                 Sku = dto.Sku,
                 ProductName = dto.ProductName,

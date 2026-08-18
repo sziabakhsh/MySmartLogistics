@@ -9,6 +9,8 @@ namespace MyLogistics.Application
     {
         public static IServiceCollection AddAppServices(this IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
+            services.AddScoped<ITenantProvider, TenantProvider>();
             services.AddScoped<IOrderService,OrderService>();
             services.AddScoped<IShipmentService, ShipmentService>();
             services.AddScoped<IWarehouseService,WarehouseService>();

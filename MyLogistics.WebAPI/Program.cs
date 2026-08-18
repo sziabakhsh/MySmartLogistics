@@ -1,7 +1,9 @@
+using Microsoft.OpenApi.Models;
 using MyLogistics.Application;
 using MyLogistics.Application.Interfaces;
 using MyLogistics.Infrastructure;
 using MyLogistics.Infrastructure.Health;
+using MyLogistics.WebAPI.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,8 +27,13 @@ builder.Services.AddHealthChecks()
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "MyLogistics API", Version = "v1" });
 
+    // add a custom header parameter for tenant ID in Swagger UI
+    options.OperationFilter<TenantHeaderOperationFilter>();
+});
 var app = builder.Build();
 
 
