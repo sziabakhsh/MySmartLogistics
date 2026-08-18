@@ -2,19 +2,12 @@
 using MyLogistics.Domain.Ordering.Entities;
 using MyLogistics.Domain.Ordering.Enums;
 using MyLogistics.Domain.Ordering.ValueObjects;
-using MyLogistics.Domain.Tenancy.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyLogistics.Application.Mappers
 {
     public static class OrderMapper
     {
-        public static OrderDto ToDto(Order order)
+        public static OrderDto ToDto(this Order order)
         {
             return new OrderDto
             {
@@ -45,7 +38,7 @@ namespace MyLogistics.Application.Mappers
             };
         }
 
-        public static Order ToEntity(CreateOrderDto dto, string tenantId)
+        public static Order ToEntity(this CreateOrderDto dto, string tenantId)
         {
             var items = dto.Items.Select(i => new OrderItem
             {
@@ -59,7 +52,7 @@ namespace MyLogistics.Application.Mappers
                 Attributes = i.Attributes ?? new()
             }).ToList();
 
-            // محاسبه مجموع مبلغ سفارش
+            // calculate total amount based on items, unit price, quantity, and discount
             var totalAmountValue = items.Sum(i => (i.Quantity * i.UnitPrice) - i.DiscountAmount);
 
             return new Order
@@ -77,14 +70,14 @@ namespace MyLogistics.Application.Mappers
                 Items = items,
                 Tags = dto.Tags ?? new(),
                 StatusHistory = new List<OrderStatusLog>
-            {
-                new OrderStatusLog
                 {
-                    Status = OrderStatus.Pending,
-                    TimestampUtc = DateTime.UtcNow,
-                    Reason = "Order created successfully."
+                    new OrderStatusLog
+                    {
+                        Status = OrderStatus.Pending,
+                        TimestampUtc = DateTime.UtcNow,
+                        Reason = "Order created successfully."
+                    }
                 }
-            }
             };
         }
     }

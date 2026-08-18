@@ -9,14 +9,17 @@ namespace MyLogistics.Application.Services
     public class InventoryService : IInventoryService
     {
         private readonly IAppDbContext _context;
+        private readonly ITenantProvider _tenantProvider;
 
-        public InventoryService(IAppDbContext context)
+        public InventoryService(IAppDbContext context, ITenantProvider tenantProvider   )
         {
             _context = context;
+            _tenantProvider = tenantProvider;
         }
 
-        public async Task<InventoryItemDto> CreateInventoryItemAsync(CreateInventoryItemDto dto, string tenantId, CancellationToken ct = default)
+        public async Task<InventoryItemDto> CreateInventoryItemAsync(CreateInventoryItemDto dto, CancellationToken ct = default)
         {
+            var tenantId = _tenantProvider.GetTenantId();
             var item = new InventoryItem
             {
                 Id = Guid.NewGuid(),
@@ -36,8 +39,9 @@ namespace MyLogistics.Application.Services
             return MapToDto(item);
         }
 
-        public async Task<InventoryItemDto?> GetInventoryItemByIdAsync(Guid id, string tenantId, CancellationToken ct = default)
+        public async Task<InventoryItemDto?> GetInventoryItemByIdAsync(Guid id, CancellationToken ct = default)
         {
+            var tenantId = _tenantProvider.GetTenantId();
             var item = await _context.InventoryItems
                 .AsNoTracking()
                 .Where(i => i.TenantId == tenantId)

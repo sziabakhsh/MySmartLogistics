@@ -1,25 +1,27 @@
 ﻿namespace MyLogistics.Application.DTOs
 {
-    public record InventoryItemDto(
-        Guid Id,
-        string TenantId,
-        Guid WarehouseId,
-        string Sku,
-        string ProductName,
-        int Quantity,
-        int ReorderLevel,
-        decimal UnitPrice,
-        DateTime LastUpdatedUtc
-    );
+    public class InventoryItemDto
+    {
+        public Guid Id { get; set; }
+        public string TenantId { get; set; } = default!;
+        public Guid WarehouseId { get; set; }
+        public string Sku { get; set; } = default!;
+        public string ProductName { get; set; } = default!;
+        public int Quantity { get; set; }
+        public int ReorderLevel { get; set; }
+        public decimal UnitPrice { get; set; }
+        public DateTime LastUpdatedUtc { get; set; }
+    }
 
-    public record CreateInventoryItemDto(
-        Guid WarehouseId,
-        string Sku,
-        string ProductName,
-        int Quantity,
-        int ReorderLevel,
-        decimal UnitPrice
-    );
+    public class CreateInventoryItemDto
+    {
+        public Guid WarehouseId { get; set; }
+        public string Sku { get; set; } = default!;
+        public string ProductName { get; set; } = default!;
+        public int Quantity { get; set; }
+        public int ReorderLevel { get; set; }
+        public decimal UnitPrice { get; set; }
+    }
 
     public record UpdateStockDto(
         int QuantityDelta // plus for increment, minus for decrement
