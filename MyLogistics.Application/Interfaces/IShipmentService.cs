@@ -10,10 +10,10 @@ namespace MyLogistics.Application.Interfaces
     public interface IShipmentService
     {
         Task<ShipmentDto> CreateShipmentAsync(CreateShipmentDto dto, CancellationToken ct = default);
-        Task<ShipmentDto?> GetShipmentByIdAsync(Guid id, string tenantId, CancellationToken ct = default);
-        Task<IEnumerable<ShipmentDto>> GetShipmentsByTenantAsync(string tenantId, CancellationToken ct = default);
-        Task<ShipmentDto?> GetShipmentByTrackingCodeAsync(string trackingCode, string tenantId, CancellationToken ct = default);
-        Task<bool> UpdateShipmentStatusAsync(Guid id, string tenantId, UpdateShipmentStatusDto dto, CancellationToken ct = default);
-        Task<bool> DeleteShipmentAsync(Guid id, string tenantId, CancellationToken ct = default);
+        Task<ShipmentDto?> GetShipmentByIdAsync(Guid id, CancellationToken ct = default);
+        Task<IEnumerable<ShipmentDto>> GetShipmentsByTenantAsync(CancellationToken ct = default);
+        Task<ShipmentDto?> GetShipmentByTrackingCodeAsync(string trackingCode, CancellationToken ct = default);
+        //Task<bool> UpdateShipmentStatusAsync(Guid id, UpdateShipmentStatusDto dto, CancellationToken ct = default);
+        Task<bool> DeleteShipmentAsync(Guid id, CancellationToken ct = default);
     }
 }

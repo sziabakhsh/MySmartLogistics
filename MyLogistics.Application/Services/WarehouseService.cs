@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyLogistics.Application.DTOs;
 using MyLogistics.Application.Interfaces;
+using MyLogistics.Application.Mappers;
 using MyLogistics.Domain.Logistics.Entities;
 
 namespace MyLogistics.Application.Services
@@ -8,54 +9,50 @@ namespace MyLogistics.Application.Services
     public class WarehouseService : IWarehouseService
     {
         private readonly IAppDbContext _context;
+        private readonly ITenantProvider _tenantProvider;
 
-        public WarehouseService(IAppDbContext context)
+        public WarehouseService(IAppDbContext context, ITenantProvider tenantProvider)
         {
             _context = context;
+            _tenantProvider = tenantProvider;
         }
 
-        public async Task<WarehouseDto> CreateWarehouseAsync(CreateWarehouseDto dto, string tenantId, CancellationToken ct = default)
+        public async Task<WarehouseDto> CreateWarehouseAsync(CreateWarehouseDto dto, CancellationToken ct = default)
         {
-            var warehouse = new Warehouse
-            {
-                Id = Guid.NewGuid(),
-                TenantId = tenantId,
-                Name = dto.Name,
-                Code = dto.Code,
-                LocationName = dto.LocationName,
-                Capacity = dto.Capacity,
-                IsActive = true,
-                CreatedAtUtc = DateTime.UtcNow
-            };
+            var tenantId = _tenantProvider.GetTenantId();
+            var warehouse = dto.ToEntity(tenantId);
 
             _context.Warehouses.Add(warehouse);
             await _context.SaveChangesAsync(ct);
 
-            return MapToDto(warehouse);
+            return warehouse.ToDto();
         }
 
-        public async Task<WarehouseDto?> GetWarehouseByIdAsync(Guid id, string tenantId, CancellationToken ct = default)
+        public async Task<WarehouseDto?> GetWarehouseByIdAsync(Guid id, CancellationToken ct = default)
         {
+            var tenantId = _tenantProvider.GetTenantId();
             var warehouse = await _context.Warehouses
                 .AsNoTracking()
                 .Where(w => w.TenantId == tenantId)
                 .FirstOrDefaultAsync(w => w.Id == id, ct);
 
-            return warehouse is null ? null : MapToDto(warehouse);
+            return warehouse is null ? null : warehouse.ToDto();
         }
 
-        public async Task<IEnumerable<WarehouseDto>> GetWarehousesByTenantAsync(string tenantId, CancellationToken ct = default)
+        public async Task<IEnumerable<WarehouseDto>> GetWarehousesByTenantAsync(CancellationToken ct = default)
         {
+            var tenantId = _tenantProvider.GetTenantId();
             var warehouses = await _context.Warehouses
                 .AsNoTracking()
                 .Where(w => w.TenantId == tenantId)
                 .ToListAsync(ct);
 
-            return warehouses.Select(MapToDto);
+            return warehouses.Select(w => w.ToDto());
         }
 
-        public async Task<bool> UpdateWarehouseAsync(Guid id, string tenantId, UpdateWarehouseDto dto, CancellationToken ct = default)
+        public async Task<bool> UpdateWarehouseAsync(Guid id, UpdateWarehouseDto dto, CancellationToken ct = default)
         {
+            var tenantId = _tenantProvider.GetTenantId();
             var warehouse = await _context.Warehouses
                 .Where(w => w.TenantId == tenantId)
                 .FirstOrDefaultAsync(w => w.Id == id, ct);
@@ -71,8 +68,9 @@ namespace MyLogistics.Application.Services
             return true;
         }
 
-        public async Task<bool> DeleteWarehouseAsync(Guid id, string tenantId, CancellationToken ct = default)
+        public async Task<bool> DeleteWarehouseAsync(Guid id, CancellationToken ct = default)
         {
+            var tenantId = _tenantProvider.GetTenantId();
             var warehouse = await _context.Warehouses
                 .Where(w => w.TenantId == tenantId)
                 .FirstOrDefaultAsync(w => w.Id == id, ct);
@@ -83,16 +81,5 @@ namespace MyLogistics.Application.Services
             await _context.SaveChangesAsync(ct);
             return true;
         }
-
-        private static WarehouseDto MapToDto(Warehouse w) => new(
-            w.Id,
-            w.TenantId,
-            w.Name,
-            w.Code,
-            w.LocationName,
-            w.Capacity,
-            w.IsActive,
-            w.CreatedAtUtc
-        );
     }
 }

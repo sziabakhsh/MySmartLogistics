@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyLogistics.Application.DTOs;
 using MyLogistics.Application.Interfaces;
+using MyLogistics.Application.Mappers;
 using MyLogistics.Domain.Logistics.Entities;
 
 
@@ -20,23 +21,12 @@ namespace MyLogistics.Application.Services
         public async Task<InventoryItemDto> CreateInventoryItemAsync(CreateInventoryItemDto dto, CancellationToken ct = default)
         {
             var tenantId = _tenantProvider.GetTenantId();
-            var item = new InventoryItem
-            {
-                Id = Guid.NewGuid(),
-                TenantId = tenantId,
-                WarehouseId = dto.WarehouseId,
-                Sku = dto.Sku,
-                ProductName = dto.ProductName,
-                Quantity = dto.Quantity,
-                ReorderLevel = dto.ReorderLevel,
-                UnitPrice = dto.UnitPrice,
-                LastUpdatedUtc = DateTime.UtcNow
-            };
+            var item = dto.ToEntity(tenantId);
 
             _context.InventoryItems.Add(item);
             await _context.SaveChangesAsync(ct);
 
-            return MapToDto(item);
+            return item.ToDto();
         }
 
         public async Task<InventoryItemDto?> GetInventoryItemByIdAsync(Guid id, CancellationToken ct = default)
@@ -47,21 +37,23 @@ namespace MyLogistics.Application.Services
                 .Where(i => i.TenantId == tenantId)
                 .FirstOrDefaultAsync(i => i.Id == id, ct);
 
-            return item is null ? null : MapToDto(item);
+            return item is null ? null : item.ToDto();
         }
 
-        public async Task<IEnumerable<InventoryItemDto>> GetInventoryByWarehouseAsync(Guid warehouseId, string tenantId, CancellationToken ct = default)
+        public async Task<IEnumerable<InventoryItemDto>> GetInventoryByWarehouseAsync(Guid warehouseId, CancellationToken ct = default)
         {
+            var tenantId = _tenantProvider.GetTenantId();
             var items = await _context.InventoryItems
                 .AsNoTracking()
                 .Where(i => i.TenantId == tenantId && i.WarehouseId == warehouseId)
                 .ToListAsync(ct);
 
-            return items.Select(MapToDto);
+            return items.Select(item => item.ToDto());
         }
 
-        public async Task<bool> UpdateStockAsync(Guid id, string tenantId, UpdateStockDto dto, CancellationToken ct = default)
+        public async Task<bool> UpdateStockAsync(Guid id, UpdateStockDto dto, CancellationToken ct = default)
         {
+            var tenantId = _tenantProvider.GetTenantId();
             var item = await _context.InventoryItems
                 .Where(i => i.TenantId == tenantId)
                 .FirstOrDefaultAsync(i => i.Id == id, ct);
@@ -75,8 +67,9 @@ namespace MyLogistics.Application.Services
             return true;
         }
 
-        public async Task<bool> DeleteInventoryItemAsync(Guid id, string tenantId, CancellationToken ct = default)
+        public async Task<bool> DeleteInventoryItemAsync(Guid id, CancellationToken ct = default)
         {
+            var tenantId = _tenantProvider.GetTenantId();
             var item = await _context.InventoryItems
                 .Where(i => i.TenantId == tenantId)
                 .FirstOrDefaultAsync(i => i.Id == id, ct);
@@ -88,16 +81,5 @@ namespace MyLogistics.Application.Services
             return true;
         }
 
-        private static InventoryItemDto MapToDto(InventoryItem i) => new(
-            i.Id,
-            i.TenantId,
-            i.WarehouseId,
-            i.Sku,
-            i.ProductName,
-            i.Quantity,
-            i.ReorderLevel,
-            i.UnitPrice,
-            i.LastUpdatedUtc
-        );
     }
 }
